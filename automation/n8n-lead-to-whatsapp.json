@@ -1,0 +1,94 @@
+{
+  "name": "Edifica — Lead a WhatsApp",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-edifica",
+        "responseMode": "onReceived",
+        "responseCode": 200,
+        "options": {}
+      },
+      "id": "webhook-lead",
+      "name": "Recibir Lead (Webhook)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [260, 300],
+      "webhookId": "lead-edifica"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "assign-texto",
+              "name": "texto",
+              "type": "string",
+              "value": "=🏗️ *Nuevo cliente — Edifica*\n\n👤 Nombre: {{ $json.body.name }}\n📱 Teléfono: {{ $json.body.phone }}\n🏠 Proyecto: {{ $json.body.projectType }}\n📝 Mensaje: {{ $json.body.message }}\n\n🌐 Enviado desde la página web"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "format-message",
+      "name": "Formatear mensaje",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.callmebot.com/whatsapp.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "phone", "value": "+59167766239" },
+            { "name": "text", "value": "={{ $json.texto }}" },
+            { "name": "apikey", "value": "TU_APIKEY_CALLMEBOT_PAPA" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "notify-dad",
+      "name": "Notificar a Papá (WhatsApp)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [720, 220]
+    },
+    {
+      "parameters": {
+        "url": "https://api.callmebot.com/whatsapp.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "phone", "value": "+591TU_NUMERO_EDUARDO" },
+            { "name": "text", "value": "={{ $json.texto }}" },
+            { "name": "apikey", "value": "TU_APIKEY_CALLMEBOT_EDUARDO" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "notify-eduardo",
+      "name": "Notificar a Eduardo (opcional)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [720, 400],
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Recibir Lead (Webhook)": {
+      "main": [[{ "node": "Formatear mensaje", "type": "main", "index": 0 }]]
+    },
+    "Formatear mensaje": {
+      "main": [
+        [
+          { "node": "Notificar a Papá (WhatsApp)", "type": "main", "index": 0 },
+          { "node": "Notificar a Eduardo (opcional)", "type": "main", "index": 0 }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "active": false
+}

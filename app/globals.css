@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/*
+ * Design system — premium, trustworthy, construction.
+ * Charcoal ink + warm amber accent + sand background.
+ * Positioning: quality and organization, NOT "the cheapest".
+ */
+
+@theme {
+  --color-ink: #14181d; /* deep charcoal — primary brand */
+  --color-ink-soft: #4a525c;
+  --color-accent: #d98324; /* warm amber — construction, craft */
+  --color-accent-dark: #a75d16;
+  --color-sand: #f6f3ee; /* warm off-white background */
+  --color-sand-deep: #ece6dc;
+  --color-line: #e2dccf; /* hairline dividers */
+
+  --font-sans: var(--font-sans-var), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-var), Georgia, serif;
+}
+
+:root {
+  --background: var(--color-sand);
+  --foreground: var(--color-ink);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth anchor scrolling for the single-page nav, offset for sticky header. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Editorial section eyebrow: 01 — Servicios */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Legal / long-form document styling */
+.legal h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  color: var(--color-ink);
+}
+.legal h3 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-ink);
+}
+.legal p,
+.legal li {
+  line-height: 1.75;
+  color: #3a424c;
+}
+.legal p {
+  margin-bottom: 1rem;
+}
+.legal ul {
+  list-style: disc;
+  padding-left: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+.legal li {
+  margin-bottom: 0.4rem;
+}
+.legal a {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal strong {
+  color: var(--color-ink);
+}
