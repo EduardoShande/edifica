@@ -37,53 +37,50 @@ export const site = {
       description:
         "Obra completa, de la fundación a los acabados. Todas las etapas de una vivienda residencial con calidad garantizada.",
       icon: "home",
-      image: "/images/service-casas.jpg",
+      image: "/images/reales/svc-construccion.jpg",
     },
     {
       title: "Remodelaciones",
       description:
         "Renovamos y ampliamos su vivienda: baños, cocinas y espacios completos, cuidando cada detalle.",
       icon: "hammer",
-      image: "/images/service-remodelacion.jpg",
+      image: "/images/reales/svc-remodelacion.jpg",
     },
     {
       title: "Obra fina y acabados",
       description:
         "Revestimientos, pisos, pintura y terminaciones que definen la diferencia entre una casa y un hogar bien hecho.",
       icon: "ruler",
-      image: "/images/service-acabados.jpg",
+      image: "/images/reales/svc-acabados.jpg",
     },
     {
       title: "Estructuras y hormigón",
       description:
         "Trabajos de hormigón, losas y estructuras ejecutados con criterio técnico y años de experiencia en obra.",
       icon: "layers",
-      image: "/images/service-hormigon.jpg",
+      image: "/images/reales/svc-estructuras.jpg",
     },
   ],
 
-  // ---- Portfolio ----
-  // NOTE: images below are TEMPORARY stock photos (Unsplash, free license) used
-  // only to show the design. Replace each `image` with your dad's real project
-  // photos and update the titles/descriptions to the real projects.
+  // ---- Portfolio (fotos reales de obras de Edifica) ----
   projects: [
     {
-      title: "Vivienda contemporánea",
+      title: "Residencia con acabados de piedra",
+      type: "Obra terminada",
+      description: "Vivienda con revestimientos de piedra, cristales y detalles de madera, entregada llave en mano.",
+      image: "/images/reales/proy-casa-acabados.jpg",
+    },
+    {
+      title: "Casa familiar de dos plantas",
       type: "Casa completa",
-      description: "Construcción residencial de dos plantas, entregada llave en mano.",
-      image: "/images/house-1.jpg",
+      description: "Espacios amplios, escaleras y terminaciones de calidad en cada ambiente.",
+      image: "/images/reales/proy-casa-escaleras.jpg",
     },
     {
-      title: "Casa familiar de autor",
-      type: "Obra nueva",
-      description: "Diseño moderno con acabados de madera y detalles de alta calidad.",
-      image: "/images/house-2.jpg",
-    },
-    {
-      title: "Residencia minimalista",
-      type: "Obra fina",
-      description: "Líneas limpias, revestimientos y terminaciones de precisión.",
-      image: "/images/house-3.jpg",
+      title: "Edificio multifamiliar",
+      type: "Obra mayor",
+      description: "Edificio de varios pisos con fachada moderna y balcones de cristal.",
+      image: "/images/reales/proy-edificio.jpg",
     },
   ],
 

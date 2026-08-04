@@ -34,6 +34,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# Original unedited photos (kept locally only; optimized copies live in public/images/reales)
+public/images/Photos of my dad's work/
+
 # vercel
 .vercel
 

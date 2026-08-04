@@ -8,8 +8,8 @@ export default function Hero() {
     <section id="inicio" className="relative min-h-[92vh] w-full overflow-hidden">
       {/* Full-bleed construction photograph */}
       <Image
-        src="/images/hero-construction.jpg"
-        alt="Equipo de construcción en obra"
+        src="/images/reales/hero-casa.jpg"
+        alt="Casa terminada por Edifica Construcciones en Santa Cruz"
         fill
         priority
         sizes="100vw"

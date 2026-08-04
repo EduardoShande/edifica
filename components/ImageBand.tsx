@@ -6,8 +6,8 @@ export default function ImageBand() {
     <section className="relative w-full overflow-hidden">
       <div className="relative min-h-[60vh] w-full">
         <Image
-          src="/images/craft-detail.jpg"
-          alt="Carpintero levantando la estructura de una vivienda"
+          src="/images/reales/band-construccion.jpg"
+          alt="Edificio en construcción por Edifica Construcciones"
           fill
           sizes="100vw"
           className="object-cover"
