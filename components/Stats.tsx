@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 const stats = [
   { value: `${site.yearsExperience}+`, label: "Años de experiencia en obra" },
   { value: "100%", label: "Clientes que nos recomiendan" },
-  { value: "3–5", label: "Personas por equipo dirigido" },
+  { value: "5–10+", label: "Personas por equipo dirigido" },
   { value: "A tiempo", label: "Entregas cumplidas" },
 ];
 
