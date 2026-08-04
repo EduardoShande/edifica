@@ -39,6 +39,14 @@ export default function Footer() {
             <a href={`mailto:${site.email}`} className="hover:text-accent">
               {site.email}
             </a>
+            <a
+              href={site.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent"
+            >
+              Facebook
+            </a>
             <Cta href={whatsappLink()} tone="light" className="mt-3 w-fit">
               Cotizar gratis
             </Cta>

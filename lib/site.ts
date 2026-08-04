@@ -23,7 +23,8 @@ export const site = {
   // Bolivia country code is 591.
   whatsapp: "59167766239",
   phoneDisplay: "+591 6776 6239",
-  email: "contacto@edifica.com.bo",
+  email: "eduardoshande123@gmail.com",
+  facebook: "https://www.facebook.com/edificaguerrero",
   city: "Santa Cruz de la Sierra, Bolivia",
 
   // Years of experience. Updates the trust messaging in one place.
@@ -145,6 +146,7 @@ export const site = {
     paragraphs: [
       "Empezamos como todos los grandes: con las manos en la obra. De albañil a contratista, aprendiendo cada etapa de una vivienda, de la fundación a los acabados, con más de 25 años levantando casas en Santa Cruz.",
       "No tenemos un título colgado en la pared; tenemos algo más difícil de conseguir: la confianza de arquitectos, ingenieros y familias que nos recomiendan porque conocen la calidad de nuestro trabajo.",
+      "Nuestra experiencia incluye haber formado parte de la construcción de obras reconocidas de la ciudad, como el Hotel Cortez.",
       "Hoy dirigimos equipos y proyectos completos, con la misma exigencia del primer día y con tecnología que hace cada obra más ordenada, clara y transparente para usted.",
     ],
     image: "/images/site-wide.jpg",

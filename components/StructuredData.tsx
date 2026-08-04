@@ -18,6 +18,7 @@ export default function StructuredData() {
     telephone: `+${site.whatsapp}`,
     email: site.email,
     priceRange: "$$",
+    sameAs: [site.facebook],
     areaServed: {
       "@type": "City",
       name: "Santa Cruz de la Sierra",
